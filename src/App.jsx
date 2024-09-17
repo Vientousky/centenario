@@ -11,6 +11,8 @@ function App() {
 
     <main>
     <Home />
+    <Home />
+    <Home />
     </main>
     </>
   )

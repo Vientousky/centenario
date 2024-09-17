@@ -7,15 +7,15 @@ export const Home = () => {
 
         <>
 
-        <section>
+        <section className='secti'>
 
-            <div>
+            <div className='tx'>
                 <h2>Bienvenido a E.E.N*59</h2>
-                <span>Del centenario</span>
+                <span>Del Centenario</span>
                 
             </div>
 
-            <div>
+            <div className='btt'>
                 <button>Saber mas</button>
                 <button>Propuestas</button>
             </div>
