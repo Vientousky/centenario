@@ -1,19 +1,19 @@
 import { useState } from 'react'
-import { Header } from './Components/header' 
-import { Home } from './Components/home' 
+import { Header } from './Components/header'
+import { Home } from './Components/home'
+import { Propuestas } from './Components/propuesta'
 
 function App() {
 
 
   return (
     <>
-    <Header />
+      <Header />
 
-    <main>
-    <Home />
-    <Home />
-    <Home />
-    </main>
+      <main>
+        <Home />
+        <Propuestas />
+      </main>
     </>
   )
 }

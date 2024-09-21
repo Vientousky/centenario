@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import './central.css';
 
 export const Header = () => {
@@ -6,7 +6,7 @@ export const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) { // este valor lo ajusto a mi gusto jajajjajaja
+            if (window.scrollY > 100) { // Ajusta este valor a mis semejansas
                 setIsSolid(true);
             } else {
                 setIsSolid(false);
@@ -20,24 +20,31 @@ export const Header = () => {
         };
     }, []);
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <>
-            <header className={`hd-menu ${isSolid ? 'solid' : ''}`}>  
-                <div className='lg'>
+            <header className={`hd-menu ${isSolid ? 'solid' : ''}`}>
+                <div className='lg' onClick={() => window.location.href = "#Home"}>
                     <img src="/school.png" alt="Fotica" />
-                    <h3>Escuela del Centenario</h3>
+                    <h3>Bachi 73</h3>
                 </div>
 
-                <nav className='nv-ul'>
+                <nav className={`nv-ul ${menuOpen ? 'active' : ''}`}>
                     <ul className='ul-li'>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Preguntas</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#Home" onClick={() => setMenuOpen(false)}>Inicio</a></li>
+                        <li><a href="#Propuesta" onClick={() => setMenuOpen(false)}>Propuesta</a></li>
+                        <li><a href="#Nosotros" onClick={() => setMenuOpen(false)}>Nosotros</a></li>
+                        <li><a href="#Preguntas" onClick={() => setMenuOpen(false)}>Preguntas</a></li>
+                        <li><a href="#Contacto" onClick={() => setMenuOpen(false)}>Contacto</a></li>
                     </ul>
                 </nav>
+
+                <button 
+                    className={`menu-toggle ${menuOpen ? 'active' : ''}`} 
+                    onClick={() => setMenuOpen(!menuOpen)}
+                ></button>
             </header>
         </>
     );
-}
+};

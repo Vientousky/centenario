@@ -1,3 +1,5 @@
+/* Comienzo de la aria de reglas para mejor manejo de la pagina */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,14 @@
     text-decoration: none;
     list-style-type: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fin de la aria de reglas */
+
+/* Comienzo al header */
 
 .hd-menu {
     width: 100%;
@@ -24,16 +34,19 @@
 /* scroll solid */
 
 .hd-menu.solid {
-    transition:  3s all;
-    background-color: rgba(49, 48, 48, 1); /* Sólido al desplazarse */
+    transition: 3s all;
+    background-color: rgba(49, 48, 48, 1);
+    /* Sólido al desplazarse */
 }
 
 .lg {
 
     display: grid;
     grid-template-columns: auto auto;
-    gap: 10px   ;
+    gap: 10px;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .lg img {
@@ -42,7 +55,7 @@
     object-fit: cover;
 }
 
-.lg h3{
+.lg h3 {
     font-size: 30px;
     color: aliceblue;
 }
@@ -62,6 +75,60 @@
 .ul-li a:hover {
     color: lightblue;
 }
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+    .hd-menu {
+        justify-content: space-between;
+    }
+
+    .nv-ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(49, 48, 48, 1);
+        padding: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .nv-ul.active {
+        display: flex;
+    }
+
+    .ul-li {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+    }
+
+    .menu-toggle.active::before {
+        content: '✖'; /* Ícono de cerrar */
+    }
+
+    .menu-toggle::before {
+        content: '☰'; /* Ícono de hamburguesa */
+    }
+}
+
 
 /* Final de header */
 
@@ -85,7 +152,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background:  url(/fotica.jpg) no-repeat center;
+    background: url(/fotica.jpg) no-repeat center;
     background-size: cover;
     z-index: -1;
 }
@@ -101,15 +168,33 @@
 }
 
 .btt {
-    z-index: 1; /* Mantiene los botones sobre el fondo */
+    z-index: 1;
+    /* Mantiene los botones sobre el fondo */
     margin-top: 20px;
-    
+
 }
 
-button {
+.btn {
     padding: 10px 20px;
     margin: 10px;
     font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
 }
+
+/* Final del home */
+
+/* Comienzo de la propuestas */
+
+.Secti-pro {
+    width: 100%;
+    height: 100vh;
+    background-color: #312f2f;
+}
+
+
+/* Fin de propuestas */
+
+/* Comienzo de nosotros */
+
+/* Fin de nosotros */

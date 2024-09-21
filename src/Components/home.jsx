@@ -7,20 +7,20 @@ export const Home = () => {
 
         <>
 
-        <section className='secti'>
+            <section id='Home' className='secti'>
 
-            <div className='tx'>
-                <h2>Bienvenido a E.E.N*59</h2>
-                <span>Del Centenario</span>
-                
-            </div>
+                <div className='tx'>
+                    <h2>Bienvenido a E.E.N*59</h2>
+                    <span>Del Centenario</span>
 
-            <div className='btt'>
-                <button>Saber mas</button>
-                <button>Propuestas</button>
-            </div>
+                </div>
 
-        </section>
+                <div className='btt'>
+                    <button className='btn'>Saber mas</button>
+                    <button className='btn'>Propuestas</button>
+                </div>
+
+            </section>
         </>
 
     )
