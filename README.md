@@ -1,9 +1,11 @@
-# Proyecto para bachi 73
+# Proyecto para Bachi 73
 
-Este es un pequeño proyecto hecho para el colegio E.E.N*59 del centenario. CH SP
+### Este es un pequeño proyecto desarrollado para el colegio E.E.N°59 del Centenario.
 
-Este proyecto ayudara al que el colegio sea mas reconociodo con los siguientes puntos
+# Objetivos del Proyecto
 
-- Visibilidad: Cuando alguien quiera buscar al colegio por la wed le aparecera (CREO) 
+### Este proyecto tiene como objetivo ayudar a que el colegio sea más reconocido, a través de los siguientes puntos:
 
-- Propuestas: Cuando uno entre a la wed le mostrara todo lo que tiene que ofrecer el colegio
+- Visibilidad: Mejorar la presencia en línea del colegio. Al buscar información en la web, el colegio aparecerá en los resultados de búsqueda.
+
+- Propuestas: Mostrar de manera clara y atractiva todas las propuestas y actividades que el colegio tiene para ofrecer a los estudiantes y la comunidad.
