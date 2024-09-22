@@ -25,12 +25,15 @@ export const Header = () => {
     return (
         <>
             <header className={`hd-menu ${isSolid ? 'solid' : ''}`}>
+
+                {/* No esta terminado todabia me hace falta que el scroll cambie el color de elemento dependiendo del lugar */}
+
                 <div className='lg' onClick={() => window.location.href = "#Home"}>
                     <img src="/school.png" alt="Fotica" />
                     <h3>Bachi 73</h3>
                 </div>
 
-                <nav className={`nv-ul ${menuOpen ? 'active' : ''}`}>
+                <nav className={`nv-ul ${menuOpen ? 'active'  : ''}`}>
                     <ul className='ul-li'>
                         <li><a href="#Home" onClick={() => setMenuOpen(false)}>Inicio</a></li>
                         <li><a href="#Propuesta" onClick={() => setMenuOpen(false)}>Propuesta</a></li>
@@ -43,8 +46,14 @@ export const Header = () => {
                 <button 
                     className={`menu-toggle ${menuOpen ? 'active' : ''}`} 
                     onClick={() => setMenuOpen(!menuOpen)}
-                ></button>
+                >
+                    <span className="line"></span>
+                    <span className="line"></span>
+                    <span className="line"></span>
+
+                </button>
             </header>
         </>
     );
+
 };

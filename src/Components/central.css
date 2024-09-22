@@ -40,13 +40,11 @@ html {
 }
 
 .lg {
-
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
     align-items: center;
     cursor: pointer;
-
 }
 
 .lg img {
@@ -73,7 +71,7 @@ html {
 }
 
 .ul-li a:hover {
-    color: lightblue;
+    color: rgb(182, 173, 230);
 }
 
 .menu-toggle {
@@ -84,51 +82,71 @@ html {
 
     .hd-menu {
         justify-content: space-between;
+        padding-left: 15px;
     }
 
     .nv-ul {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
-        right: 20px;
+        width: 100%;
+        height: 400px;
+        top: 69px;
+        left: 0px;
         background-color: rgba(49, 48, 48, 1);
         padding: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
     .nv-ul.active {
         display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     .ul-li {
         flex-direction: column;
-        gap: 10px;
+        font-size: 30px;
+        text-align: center;
     }
 
+    /* estilo para poder crear icono de aburgesa y X */
+
     .menu-toggle {
+        margin-right: 15px;
         display: block;
-        font-size: 24px;
+        width: 30px;
+        height: 22px;
+        position: relative;
         background: none;
         border: none;
-        color: white;
         cursor: pointer;
-        position: absolute;
-        top: 20px;
-        right: 20px;
         z-index: 3;
     }
 
-    .menu-toggle.active::before {
-        content: '✖'; /* Ícono de cerrar */
+    .menu-toggle .line {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 20px;
+        margin: 4px 0;
+        transition:  all 0.3s ease;
     }
 
-    .menu-toggle::before {
-        content: '☰'; /* Ícono de hamburguesa */
+    .menu-toggle.active .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
+
+    .menu-toggle.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
 }
-
 
 /* Final de header */
 

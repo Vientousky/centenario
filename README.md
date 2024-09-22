@@ -1,8 +1,9 @@
-# React + Vite
+# Proyecto para bachi 73
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un pequeño proyecto hecho para el colegio E.E.N*59 del centenario. CH SP
 
-Currently, two official plugins are available:
+Este proyecto ayudara al que el colegio sea mas reconociodo con los siguientes puntos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Visibilidad: Cuando alguien quiera buscar al colegio por la wed le aparecera (CREO) 
+
+- Propuestas: Cuando uno entre a la wed le mostrara todo lo que tiene que ofrecer el colegio
