@@ -113,10 +113,10 @@ html {
     /* estilo para poder crear icono de aburgesa y X */
 
     .menu-toggle {
-        margin-right: 15px;
+        padding-right: 15px;
         display: block;
-        width: 30px;
-        height: 22px;
+        width: 40px;
+        height: 40px;
         position: relative;
         background: none;
         border: none;
@@ -153,52 +153,72 @@ html {
 /* Inicio de home */
 
 .secti {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background:linear-gradient(rgb(40 42 55 / 44%), rgb(40 42 55 / 29%)), url(/fotica.jpg) no-repeat center;
+    background-size: cover;
     height: 100vh;
     width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.secti::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(/fotica.jpg) no-repeat center;
-    background-size: cover;
     z-index: -1;
-}
-
-.tx {
-    font-size: 40px;
-    color: aliceblue;
-}
-
-.tx span {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
-.btt {
-    z-index: 1;
-    /* Mantiene los botones sobre el fondo */
-    margin-top: 20px;
-
+.contenedor {
+    max-width: 56%;
+    height: 100%;
+    padding: 20px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
+.contenedor h1 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.contenedor h3 {
+    color: aliceblue;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+}
+
 
 .btn {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
+    height: auto;
+    padding: 20px;
 }
+
+.btn a {
+
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    border: 3px solid #007F3E;
+    border-radius: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .contenedor {
+        max-width: 90%;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+} 
+
 
 /* Final del home */
 

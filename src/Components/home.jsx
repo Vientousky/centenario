@@ -9,15 +9,14 @@ export const Home = () => {
 
             <section id='Home' className='secti'>
 
-                <div className='tx'>
-                    <h2>Bienvenido a E.E.N*59</h2>
-                    <span>Del Centenario</span>
+                <div className="contenedor">
 
-                </div>
-
-                <div className='btt'>
-                    <button className='btn'>Saber mas</button>
-                    <button className='btn'>Propuestas</button>
+                    <h1>Bievenido a la E.E.N°59 </h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sapiente perspiciatis? Culpa laboriosam omnis nobis, perspiciatis, vero dolorem nostrum saepe totam repudiandae doloribus aperiam minus voluptatem! Eos deleniti sed quam.</h3>
+                    <div className='btn'>
+                        <a href="#Propuesta">Propuestas</a>
+                        <a href="#Nosotros">Saber mas</a>
+                    </div>
                 </div>
 
             </section>

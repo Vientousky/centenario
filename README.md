@@ -2,6 +2,8 @@
 
 ### Este es un pequeño proyecto desarrollado para el colegio E.E.N°59 del Centenario.
 
+### Ubicado en Seanz Peña Chaco Argentina
+
 # Objetivos del Proyecto
 
 ### Este proyecto tiene como objetivo ayudar a que el colegio sea más reconocido, a través de los siguientes puntos:

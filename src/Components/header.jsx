@@ -30,7 +30,7 @@ export const Header = () => {
 
                 <div className='lg' onClick={() => window.location.href = "#Home"}>
                     <img src="/school.png" alt="Fotica" />
-                    <h3>Bachi 73</h3>
+                    <h3>E.E.N°59</h3>
                 </div>
 
                 <nav className={`nv-ul ${menuOpen ? 'active'  : ''}`}>
