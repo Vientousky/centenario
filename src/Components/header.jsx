@@ -36,8 +36,8 @@ export const Header = () => {
                 <nav className={`nv-ul ${menuOpen ? 'active'  : ''}`}>
                     <ul className='ul-li'>
                         <li><a href="#Home" onClick={() => setMenuOpen(false)}>Inicio</a></li>
-                        <li><a href="#Propuesta" onClick={() => setMenuOpen(false)}>Propuesta</a></li>
                         <li><a href="#Nosotros" onClick={() => setMenuOpen(false)}>Nosotros</a></li>
+                        <li><a href="#Propuesta" onClick={() => setMenuOpen(false)}>Propuesta</a></li>
                         <li><a href="#Preguntas" onClick={() => setMenuOpen(false)}>Preguntas</a></li>
                         <li><a href="#Contacto" onClick={() => setMenuOpen(false)}>Contacto</a></li>
                     </ul>

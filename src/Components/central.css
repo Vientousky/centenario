@@ -1,4 +1,7 @@
 /* Comienzo de la aria de reglas para mejor manejo de la pagina */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
 
 * {
     margin: 0;
@@ -54,20 +57,24 @@ html {
 }
 
 .lg h3 {
+    letter-spacing: 1.5px;
     font-size: 30px;
     color: aliceblue;
+    font-family: "Roboto", sans-serif;
 }
 
 
 .ul-li {
     display: flex;
     gap: 25px;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .ul-li a {
+    letter-spacing: 1.5px;
     color: azure;
     text-decoration: none;
+    font-family: "Roboto", sans-serif;
 }
 
 .ul-li a:hover {
@@ -78,7 +85,7 @@ html {
     display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
 
     .hd-menu {
         justify-content: space-between;
@@ -131,7 +138,7 @@ html {
         background-color: white;
         border-radius: 20px;
         margin: 4px 0;
-        transition:  all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .menu-toggle.active .line:nth-child(1) {
@@ -153,7 +160,7 @@ html {
 /* Inicio de home */
 
 .secti {
-    background:linear-gradient(rgb(40 42 55 / 44%), rgb(40 42 55 / 29%)), url(/fotica.jpg) no-repeat center;
+    background: linear-gradient(rgb(40 42 55 / 44%), rgb(40 42 55 / 42%)), url(/fotica.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -166,7 +173,7 @@ html {
 .contenedor {
     max-width: 56%;
     height: 100%;
-    padding: 20px;    
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,19 +181,35 @@ html {
     text-align: center;
 }
 
+.contenedor span {
+    color: rgb(0, 174, 255);
+    font-family: "Clicker Script", cursive;
+    letter-spacing: 0.5rem;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
 .contenedor h1 {
     color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Comfortaa", sans-serif;
     margin-bottom: 15px;
     font-size: 55px;
     font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .contenedor h3 {
-    color: aliceblue;
+    font-family: "Comfortaa", sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1.5px;
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 600;
     display: flex;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -196,17 +219,21 @@ html {
 }
 
 .btn a {
-
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 24px;
     margin: 10px;
     color: #fff;
-    transition: background-color 0.3s ease;
-    border: 3px solid #007F3E;
-    border-radius: 15px;
+    font-family: "Comfortaa", sans-serif;
+    background-color: #4CAF50;
+    border-radius: 20px;
+    transition: 1s;
 }
 
-@media (max-width: 700px) {
+.btn a:hover {
+    background-color: #35a33a;
+}
+
+@media (max-width: 759px) {
 
     .contenedor {
         max-width: 90%;
@@ -217,22 +244,206 @@ html {
         flex-direction: column;
     }
 
-} 
+}
 
 
 /* Final del home */
+
+/* Comienzo de Nosotros */
+
+.Sec-nt {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 94.5vh;
+    background: #282a37;
+    padding: 20px;
+}
+
+.cont-nt {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+}
+
+.cont-nt .img-nt {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.cont-nt .txt-nt {
+    flex: 0 0 55%;
+    max-width: 55%;
+}
+
+.img-nt img {
+    width: 100%;
+    height: 700px
+    
+}
+
+.txt-nt {
+    width: 60vh;
+    height: 700px;
+    padding-left: 20px;
+}
+
+.txt-nt h3,
+h2 {
+    color: aliceblue;
+    text-align: center;
+    font-family: "Comfortaa", sans-serif;
+    margin-bottom: 14px;
+}
+
+.txt-nt h2 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.txt-nt h3 {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+.txt-nt span {
+    color: rgb(36, 155, 211);
+    font-family: "Clicker Script", cursive;
+    font-size: 43.5px;
+    letter-spacing: 3px;
+}
+
+.txt-nt p {
+    color: aliceblue;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 24px;
+    margin-left: 17px;
+}
+
+@media (max-width: 780px) {
+
+    .Sec-nt {
+        padding: 20px; 
+        height: auto;
+    }
+
+    .cont-nt {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cont-nt .img-nt {
+        flex: 0 0 100%;
+        max-width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .cont-nt .img-nt img {
+        width: 100%;
+        height: 250px; 
+        object-fit: cover;
+        border-radius: 8px; 
+    }
+
+    .cont-nt .txt-nt {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .txt-nt {
+        padding-left: 0;
+    }
+
+
+    .cont-nt .txt-nt p {
+        padding: 0 ; 
+        margin: 0;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .cont-nt .img-nt img {
+        height: 280px;
+    }
+
+}
+
+
+
+/* Final de Nosotros */
 
 /* Comienzo de la propuestas */
 
 .Secti-pro {
     width: 100%;
-    height: 100vh;
-    background-color: #312f2f;
+    min-height: 92.7vh;
+    background-color: #282a37;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
+.card {
+    width: 80%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.sub-card {
+    background-color: aliceblue;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-card img {
+    border-radius: 24px 24px 0 0;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.sub-card h3 {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 25px 0;
+}
+
+.sub-card p {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+.sub-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sub-card button:hover {
+    background-color: #45a049;
+}
 
 /* Fin de propuestas */
-
-/* Comienzo de nosotros */
-
-/* Fin de nosotros */
