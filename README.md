@@ -2,7 +2,7 @@
 
 ### Este es un pequeño proyecto desarrollado para el colegio E.E.N°59 del Centenario.
 
-### Ubicado en Seanz Peña Chaco Argentina
+### Ubicado en Saenz Peña Chaco Argentina
 
 # Objetivos del Proyecto
 
