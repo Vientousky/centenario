@@ -11,34 +11,49 @@
     list-style-type: none;
 }
 
+:root {
+    /* Colores de fondo */
+    --bg--black--Menu: #2a2a2e; /* Fondo del menú */
+    --bg--black--fondo: #26262b; /* Fondo general */
+
+    /* Colores de texto */
+    --cl--white--700: #f0f0f5; /* Texto principal */
+    --cl--white--600: #e5e5e6; /* Texto secundario */
+
+    /* Colores de interacción */
+    --hover--menu: #1eb343; /* Color al pasar el ratón sobre el menú */
+    --btn--menu: #1e9e3e; /* Fondo de los botones del menú */
+    --logo--span: #2e89dd; /* Color del texto del logo */
+}
+
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Fin de la aria de reglas */
+/* ----> Fin de la aria de reglas <---- */
 
-/* Comienzo al header */
+/* ---->  Comienzo al header <---- */
 
 .hd-menu {
     width: 100%;
-    height: 70px;
+    height: 76px;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(49, 48, 48, 0);
+    transition: background-color 0.5s ease-in-out;
+    background-color: #2a2a2e00;
     /* Completamente transparente en home */
     align-items: center;
     position: fixed;
     /* Fijo para que se superponga al contenido del home */
     top: 0;
-    transition: background-color 0.3s ease;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* scroll solid */
 
 .hd-menu.solid {
-    transition: 3s all;
-    background-color: rgba(49, 48, 48, 1);
+    background-color: var(--bg--black--Menu);
     /* Sólido al desplazarse */
 }
 
@@ -51,34 +66,30 @@ html {
 }
 
 .lg img {
-    width: 50px;
     height: 50px;
-    object-fit: cover;
 }
 
-.lg h3 {
-    letter-spacing: 1.5px;
+.lg h2 {
+    letter-spacing: 2px;
     font-size: 30px;
-    color: aliceblue;
+    color: var(--cl--white--700);
     font-family: "Roboto", sans-serif;
 }
 
-
 .ul-li {
     display: flex;
-    gap: 25px;
-    font-size: 24px;
+    gap: 18px;
+    font-size: 28px;
 }
 
 .ul-li a {
     letter-spacing: 1.5px;
-    color: azure;
-    text-decoration: none;
+    color: var(--cl--white--700);
     font-family: "Roboto", sans-serif;
 }
 
 .ul-li a:hover {
-    color: rgb(182, 173, 230);
+    color: var(--hover--menu);
 }
 
 .menu-toggle {
@@ -94,14 +105,12 @@ html {
 
     .nv-ul {
         display: none;
-        flex-direction: column;
         position: absolute;
         width: 100%;
-        height: 400px;
-        top: 69px;
+        height: 412px;
+        top: 70px;
         left: 0px;
-        background-color: rgba(49, 48, 48, 1);
-        padding: 10px;
+        background-color: var(--bg--black--Menu);
         z-index: 1;
     }
 
@@ -117,13 +126,13 @@ html {
         text-align: center;
     }
 
-    /* estilo para poder crear icono de aburgesa y X */
+    /* estilo para poder crear icono de = y X */
 
     .menu-toggle {
-        padding-right: 15px;
+        margin: 20px;
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
         position: relative;
         background: none;
         border: none;
@@ -155,12 +164,12 @@ html {
 
 }
 
-/* Final de header */
+/* ---->  Final de header <---- */
 
-/* Inicio de home */
+/* ----> Inicio de home <---- */
 
 .secti {
-    background: linear-gradient(rgb(40 42 55 / 44%), rgb(40 42 55 / 42%)), url(/fotica.jpg) no-repeat center;
+    background: linear-gradient(rgba(40, 42, 55, 0.6), rgba(40, 42, 55, 0.6)), url(/fotica.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -181,35 +190,26 @@ html {
     text-align: center;
 }
 
-.contenedor span {
-    color: rgb(0, 174, 255);
-    font-family: "Clicker Script", cursive;
-    letter-spacing: 0.5rem;
-    font-optical-sizing: auto;
-    font-style: normal;
-
+.contenedor h1, 
+.contenedor h2 {
+    font-family: "Comfortaa", sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6), 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .contenedor h1 {
-    color: rgb(255, 255, 255);
+    color: var(--cl--white--700);
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: "Comfortaa", sans-serif;
-    margin-bottom: 15px;
-    font-size: 55px;
+    font-size:  3.5em;
     font-weight: 700;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.contenedor h3 {
-    font-family: "Comfortaa", sans-serif;
-    color: rgb(255, 255, 255);
+.contenedor h2 {
+    color: var(--cl--white--600);
     letter-spacing: 1.5px;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 2em ;
     font-weight: 600;
-    display: flex;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -220,43 +220,64 @@ html {
 
 .btn a {
     padding: 10px 20px;
-    font-size: 24px;
+    font-size: 20px;
     margin: 10px;
-    color: #fff;
+    color: var(--cl--white--600);
     font-family: "Comfortaa", sans-serif;
-    background-color: #4CAF50;
+    background-color: var(--btn--menu);
     border-radius: 20px;
-    transition: 1s;
 }
 
 .btn a:hover {
-    background-color: #35a33a;
+    background-color: var(--hover--menu);
 }
 
 @media (max-width: 759px) {
+    
+    .secti {
+        height: 100vh;
+    }
 
     .contenedor {
-        max-width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 50px;
+        padding: 0 15px; /* Mejor espaciado */
+    }
+
+    .contenedor h1 {
+        font-size: 2.5em;
+    }
+
+    .contenedor h2 {
+        font-size: 1.5em;
+        margin-bottom: 5px; /* Separación de elementos */
     }
 
     .btn {
         display: flex;
         flex-direction: column;
+        align-items: center; /* Centrado de botones */
     }
-
 }
 
+@media (max-height: 540px) {
 
-/* Final del home */
+    .contenedor h1 {
+        margin-top: 30px;
+    }
+}
 
-/* Comienzo de Nosotros */
+/* ----> Final del home <---- */
+
+/* ----> Comienzo de Nosotros <---- */
 
 .Sec-nt {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 94.5vh;
-    background: #282a37;
+    min-height: 94.5vh;
+    background: var(--bg--black--fondo);
     padding: 20px;
 }
 
@@ -264,8 +285,7 @@ html {
     max-width: 1160px;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 0;
-    display: flex;
+    display: flex; 
 }
 
 .cont-nt .img-nt {
@@ -280,8 +300,8 @@ html {
 
 .img-nt img {
     width: 100%;
-    height: 700px
-    
+    height: 700px;
+    object-fit: cover;
 }
 
 .txt-nt {
@@ -290,160 +310,92 @@ html {
     padding-left: 20px;
 }
 
+.txt-nt h2,
 .txt-nt h3,
-h2 {
-    color: aliceblue;
+.txt-nt p {
+    color: var(--cl--white--600);
     text-align: center;
     font-family: "Comfortaa", sans-serif;
     margin-bottom: 14px;
 }
 
 .txt-nt h2 {
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
 
 .txt-nt h3 {
-    font-size: 35px;
+    font-size: 2em;
     font-weight: 600;
     letter-spacing: 1px;
-
 }
 
 .txt-nt span {
-    color: rgb(36, 155, 211);
+    color: var(--logo--span);
     font-family: "Clicker Script", cursive;
     font-size: 43.5px;
-    letter-spacing: 3px;
+    letter-spacing: 0.1em;
 }
 
 .txt-nt p {
-    color: aliceblue;
+    color: var(--cl--white--600);
     font-family: "Comfortaa", sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
-    font-size: 24px;
-    margin-left: 17px;
+    font-size: 1.5em;
+}
+
+@media (max-height:700px) {
+    .cont-nt {
+        padding: 50px 0;
+    }
 }
 
 @media (max-width: 780px) {
 
-    .Sec-nt {
-        padding: 20px; 
-        height: auto;
-    }
-
     .cont-nt {
         flex-direction: column;
         gap: 20px;
+        
     }
 
     .cont-nt .img-nt {
         flex: 0 0 100%;
-        max-width: 100%; 
+        max-width: 100%;
         margin-bottom: 20px;
     }
 
     .cont-nt .img-nt img {
-        width: 100%;
-        height: 250px; 
-        object-fit: cover;
-        border-radius: 8px; 
+        height: 250px;
+        border-radius: 8px;
     }
 
     .cont-nt .txt-nt {
         flex: 0 0 100%;
         max-width: 100%;
         margin: 0 auto;
-    }
-
-    .txt-nt {
         padding-left: 0;
     }
 
-
     .cont-nt .txt-nt p {
-        padding: 0 ; 
+        padding: 0;
         margin: 0;
     }
 }
 
 @media (max-width: 430px) {
-
     .cont-nt .img-nt img {
         height: 280px;
     }
-
 }
-
-
-
-/* Final de Nosotros */
-
-/* Comienzo de la propuestas */
+/* ----> Final de Nosotros <---- */
 
 .Secti-pro {
     width: 100%;
-    min-height: 92.7vh;
-    background-color: #282a37;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 100vh;
 }
 
-.card {
-    width: 80%;
-    height: 50vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin: 0 auto;
-}
 
-.sub-card {
-    background-color: aliceblue;
-    border-radius: 26px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sub-card img {
-    border-radius: 24px 24px 0 0;
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.sub-card h3 {
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 25px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin: 25px 0;
-}
-
-.sub-card p {
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    margin-bottom: 20px;
-}
-
-.sub-card button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.sub-card button:hover {
-    background-color: #45a049;
-}
-
-/* Fin de propuestas */
+/* background: url(/public/fotica.jpg) no-repeat center;
+    background-attachment:fixed; */

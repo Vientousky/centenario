@@ -15,6 +15,8 @@ function App() {
         <Home />
         <Nosotros/>
         <Propuestas />
+        
+
       </main>
     </>
   )
