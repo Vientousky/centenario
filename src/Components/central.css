@@ -35,6 +35,10 @@ html {
 
 /* ---->  Comienzo al header <---- */
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .hd-menu {
     width: 100%;
     height: 76px;
@@ -42,19 +46,14 @@ html {
     justify-content: space-around;
     transition: background-color 0.5s ease-in-out;
     background-color: #2a2a2e00;
-    /* Completamente transparente en home */
     align-items: center;
     position: fixed;
-    /* Fijo para que se superponga al contenido del home */
     top: 0;
     z-index: 1;
 }
 
-/* scroll solid */
-
 .hd-menu.solid {
     background-color: var(--bg--black--Menu);
-    /* Sólido al desplazarse */
 }
 
 .lg {
@@ -71,15 +70,27 @@ html {
 
 .lg h2 {
     letter-spacing: 2px;
-    font-size: 30px;
+    font-size: 2em;
     color: var(--cl--white--700);
     font-family: "Roboto", sans-serif;
+}
+
+.nv-ul .ul-li .active a {
+    color: var(--btn--menu);
+}
+
+.nv-ul .ul-li .active a:hover {
+    color: var(--hover--menu);
+}
+
+.nv-ul .ul-li a {
+    transition: color 0.3s ease;
 }
 
 .ul-li {
     display: flex;
     gap: 18px;
-    font-size: 28px;
+    font-size: 1.6em;
 }
 
 .ul-li a {
@@ -97,7 +108,6 @@ html {
 }
 
 @media (max-width: 860px) {
-
     .hd-menu {
         justify-content: space-between;
         padding-left: 15px;
@@ -125,8 +135,6 @@ html {
         font-size: 30px;
         text-align: center;
     }
-
-    /* estilo para poder crear icono de = y X */
 
     .menu-toggle {
         margin: 20px;
@@ -161,7 +169,6 @@ html {
     .menu-toggle.active .line:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-
 }
 
 /* ---->  Final de header <---- */
@@ -170,6 +177,7 @@ html {
 
 .secti {
     background: linear-gradient(rgba(40, 42, 55, 0.6), rgba(40, 42, 55, 0.6)), url(/fotica.jpg) no-repeat center;
+    background-attachment:fixed;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -398,4 +406,4 @@ html {
 
 
 /* background: url(/public/fotica.jpg) no-repeat center;
-    background-attachment:fixed; */
+    background-attachment:fixed; Esto hace que la imgen te siga*/
