@@ -76,11 +76,8 @@ body.no-scroll {
 }
 
 .nv-ul .ul-li .active a {
-    color: var(--btn--menu);
-}
 
-.nv-ul .ul-li .active a:hover {
-    color: var(--hover--menu);
+    color: var(--btn--menu);
 }
 
 .nv-ul .ul-li a {
@@ -94,13 +91,18 @@ body.no-scroll {
 }
 
 .ul-li a {
+    padding: 5px; 
     letter-spacing: 1.5px;
     color: var(--cl--white--700);
     font-family: "Roboto", sans-serif;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
 }
 
 .ul-li a:hover {
-    color: var(--hover--menu);
+    background-color: rgba(91, 97, 99, 0.452); 
+    padding: 5px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .menu-toggle {
@@ -108,16 +110,18 @@ body.no-scroll {
 }
 
 @media (max-width: 860px) {
+    
     .hd-menu {
         justify-content: space-between;
         padding-left: 15px;
+        padding-right: 15px;
     }
 
     .nv-ul {
         display: none;
         position: absolute;
         width: 100%;
-        height: 412px;
+        height: 100vh;
         top: 70px;
         left: 0px;
         background-color: var(--bg--black--Menu);
@@ -235,15 +239,12 @@ body.no-scroll {
     background-color: var(--btn--menu);
     border-radius: 20px;
 }
-
-.btn a:hover {
-    background-color: var(--hover--menu);
-}
-
-@media (max-width: 759px) {
+@media (max-width: 780px) {
     
     .secti {
         height: 100vh;
+        background-attachment: scroll;
+
     }
 
     .contenedor {
@@ -404,6 +405,3 @@ body.no-scroll {
     height: 100vh;
 }
 
-
-/* background: url(/public/fotica.jpg) no-repeat center;
-    background-attachment:fixed; Esto hace que la imgen te siga*/

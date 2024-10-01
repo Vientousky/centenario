@@ -8,7 +8,7 @@ export const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsSolid(window.scrollY > 80);
+            setIsSolid(window.scrollY > 15);
 
             const sections = document.querySelectorAll('section');
             let currentSection = 'Home';
