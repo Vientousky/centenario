@@ -1,0 +1,69 @@
+{
+  "Reglamentos": [
+    {
+      "Titulo": "¿Cuál es el reglamento?",
+      "Descripcion": "Este apartado detalla las normas y directrices que deben seguirse dentro de la institución. Incluye información sobre comportamiento, uso de instalaciones y procedimientos generales."
+    },
+    {
+      "titulo": "¿Cómo se sancionan las conductas?",
+      "descripcion": "Aquí se explica el proceso y las medidas disciplinarias que se aplican en caso de incumplimiento de las normas. Se describen las posibles sanciones y el procedimiento para su aplicación."
+    },
+    {
+      "titulo": "¿Cuál es la vestimenta adecuada?",
+      "descripcion": "Este segmento especifica el código de vestimenta requerido para los estudiantes y el personal. Incluye detalles sobre qué tipo de ropa es aceptable y las expectativas de presentación personal."
+    }
+  ],
+
+  "HorariosTurnos": [
+    {
+      "titulo": "¿Cuáles son los horarios?",
+      "descripcion": "En esta sección se proporcionan los horarios generales de funcionamiento de la institución, incluyendo apertura y cierre, así como horarios específicos para diferentes actividades."
+    },
+    {
+      "titulo": "¿Cuáles son los horarios de los turnos?",
+      "descripcion": "Aquí se detallan los horarios específicos de los turnos disponibles para los estudiantes. Incluye información sobre la duración de cada turno y los intervalos entre ellos."
+    }
+  ],
+
+  "InscripcionesPases": [
+    {
+      "titulo": "¿Cómo inscribirme?",
+      "descripcion": "Esta sección ofrece una guía paso a paso sobre el proceso de inscripción. Incluye los requisitos necesarios y los pasos a seguir para completar la inscripción exitosamente."
+    },
+    {
+      "titulo": "¿Qué documentos son necesarios para el pase?",
+      "descripcion": "Aquí se enumeran los documentos que deben presentarse para solicitar un pase. Incluye detalles sobre cada documento y su importancia en el proceso de solicitud."
+    },
+    {
+      "titulo": "¿Cuándo inicia el periodo de inscripciones?",
+      "descripcion": "El periodo de inscripciones inicia el 1 de marzo y finaliza el 31 de mayo. Durante este tiempo, los aspirantes pueden presentar sus documentos en la oficina de admisiones."
+    },
+    {
+      "titulo": "¿Cómo puedo realizar un pase desde otra institución?",
+      "descripcion": "Para realizar un pase desde otra institución, debes presentar una solicitud formal, acompañada de tu historial académico y una carta de buena conducta de tu institución anterior."
+    }
+  ],
+
+  "MateriaDeudadas": [
+    {
+      "titulo": "¿Qué son las materias adeudadas?",
+      "descripcion": "Son aquellas materias que no se han aprobado en el ciclo lectivo correspondiente y que deben regularizarse antes de finalizar los estudios."
+    },
+    {
+      "titulo": "¿Cuándo debo rendir las materias adeudadas?",
+      "descripcion": "Las fechas para rendir materias adeudadas son establecidas por la institución al inicio de cada ciclo lectivo. Se recomienda consultar el calendario académico."
+    },
+    {
+      "titulo": "¿Cuántas materias puedo adeudar sin perder el año?",
+      "descripcion": "El número de materias que se pueden adeudar sin perder el año puede variar según las normativas de la institución. Generalmente, se permiten hasta tres materias."
+    },
+    {
+      "titulo": "¿Qué sucede si no apruebo una materia adeudada?",
+      "descripcion": "Si no apruebas una materia adeudada, tendrás nuevas oportunidades en futuros exámenes, pero es importante regularizar todas las materias antes de graduarte."
+    },
+    {
+      "titulo": "¿Dónde puedo encontrar el temario de las materias adeudadas?",
+      "descripcion": "El temario de las materias adeudadas se puede consultar en la página web de la institución o en la secretaría académica."
+    }
+  ]
+}

@@ -13,17 +13,33 @@
 
 :root {
     /* Colores de fondo */
-    --bg--black--Menu: #2a2a2e; /* Fondo del menú */
-    --bg--black--fondo: #26262b; /* Fondo general */
+    --color-fondo-menu: #2a2a2e;
+    /* Fondo del menú */
+    --color-fondo-general: #26262b;
+    /* Fondo general */
 
     /* Colores de texto */
-    --cl--white--700: #f0f0f5; /* Texto principal */
-    --cl--white--600: #e5e5e6; /* Texto secundario */
+    --color-texto-principal: #f0f0f5;
+    /* Texto principal (blanco) */
+    --color-texto-secundario: #e5e5e6;
+    /* Texto secundario (gris claro) */
+    --color-texto-destacado: #2e89dd;
+    /* Texto destacado (azul brillante) */
+
+    /* Colores de apartado de preguntas frecuentes, cards, modales */
+    --color-apartado-frecuente: #f7f7f9;
+    /* Color de fondo claro para cards/modales (gris claro) */
 
     /* Colores de interacción */
-    --hover--menu: #1eb343; /* Color al pasar el ratón sobre el menú */
-    --btn--menu: #1e9e3e; /* Fondo de los botones del menú */
-    --logo--span: #2e89dd; /* Color del texto del logo */
+    --color-hover-menu: #28a745;
+    /* Color al pasar el ratón sobre el menú (verde) */
+    --color-boton-menu: #1e9e3e;
+    /* Fondo de los botones del menú (verde oscuro) */
+}
+
+
+body {
+    background: var(--color-fondo-general);
 }
 
 
@@ -35,7 +51,7 @@ html {
 
 /* ---->  Comienzo al header <---- */
 
-body.no-scroll {
+.no-scroll {
     overflow: hidden;
 }
 
@@ -53,7 +69,7 @@ body.no-scroll {
 }
 
 .hd-menu.solid {
-    background-color: var(--bg--black--Menu);
+    background-color: var(--color-fondo-menu);
 }
 
 .lg {
@@ -71,13 +87,13 @@ body.no-scroll {
 .lg h2 {
     letter-spacing: 2px;
     font-size: 2em;
-    color: var(--cl--white--700);
+    color: var(--color-texto-principal);
     font-family: "Roboto", sans-serif;
 }
 
 .nv-ul .ul-li .active a {
 
-    color: var(--btn--menu);
+    color: var(--color-hover-menu);
 }
 
 .nv-ul .ul-li a {
@@ -91,18 +107,18 @@ body.no-scroll {
 }
 
 .ul-li a {
-    padding: 5px; 
+    padding: 5px;
     letter-spacing: 1.5px;
-    color: var(--cl--white--700);
+    color: var(--color-texto-principal);
     font-family: "Roboto", sans-serif;
     transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
 }
 
 .ul-li a:hover {
-    background-color: rgba(91, 97, 99, 0.452); 
-    padding: 5px; 
+    background-color: rgba(91, 97, 99, 0.452);
+    padding: 5px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menu-toggle {
@@ -110,7 +126,7 @@ body.no-scroll {
 }
 
 @media (max-width: 860px) {
-    
+
     .hd-menu {
         justify-content: space-between;
         padding-left: 15px;
@@ -124,15 +140,18 @@ body.no-scroll {
         height: 100vh;
         top: 70px;
         left: 0px;
-        background-color: var(--bg--black--Menu);
+        background-color: var(--color-fondo-menu);
         z-index: 1;
+        transform: translateX(-100%);
     }
 
     .nv-ul.active {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        transform: translateX(0);
     }
+
 
     .ul-li {
         flex-direction: column;
@@ -156,10 +175,10 @@ body.no-scroll {
         display: block;
         width: 100%;
         height: 3px;
-        background-color: white;
+        background-color: var(--color-apartado-frecuente);
         border-radius: 20px;
         margin: 4px 0;
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .menu-toggle.active .line:nth-child(1) {
@@ -181,7 +200,7 @@ body.no-scroll {
 
 .secti {
     background: linear-gradient(rgba(40, 42, 55, 0.6), rgba(40, 42, 55, 0.6)), url(/fotica.jpg) no-repeat center;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -202,7 +221,7 @@ body.no-scroll {
     text-align: center;
 }
 
-.contenedor h1, 
+.contenedor h1,
 .contenedor h2 {
     font-family: "Comfortaa", sans-serif;
     margin-bottom: 20px;
@@ -210,17 +229,17 @@ body.no-scroll {
 }
 
 .contenedor h1 {
-    color: var(--cl--white--700);
+    color: var(--color-texto-principal);
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size:  3.5em;
+    font-size: 3.5em;
     font-weight: 700;
 }
 
 .contenedor h2 {
-    color: var(--cl--white--600);
+    color: var(--color-texto-secundario);
     letter-spacing: 1.5px;
-    font-size: 2em ;
+    font-size: 2em;
     font-weight: 600;
 }
 
@@ -234,13 +253,18 @@ body.no-scroll {
     padding: 10px 20px;
     font-size: 20px;
     margin: 10px;
-    color: var(--cl--white--600);
+    color: var(--color-texto-secundario);
     font-family: "Comfortaa", sans-serif;
-    background-color: var(--btn--menu);
+    background-color: var(--color-boton-menu);
     border-radius: 20px;
 }
+
+.btn a:hover {
+    background-color: var(--color-hover-menu);
+}
+
 @media (max-width: 780px) {
-    
+
     .secti {
         height: 100vh;
         background-attachment: scroll;
@@ -251,7 +275,8 @@ body.no-scroll {
         max-width: 100%;
         height: auto;
         margin-top: 50px;
-        padding: 0 15px; /* Mejor espaciado */
+        padding: 0 15px;
+        /* Mejor espaciado */
     }
 
     .contenedor h1 {
@@ -260,13 +285,15 @@ body.no-scroll {
 
     .contenedor h2 {
         font-size: 1.5em;
-        margin-bottom: 5px; /* Separación de elementos */
+        margin-bottom: 5px;
+        /* Separación de elementos */
     }
 
     .btn {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centrado de botones */
+        align-items: center;
+        /* Centrado de botones */
     }
 }
 
@@ -286,7 +313,6 @@ body.no-scroll {
     align-items: center;
     width: 100%;
     min-height: 94.5vh;
-    background: var(--bg--black--fondo);
     padding: 20px;
 }
 
@@ -294,7 +320,7 @@ body.no-scroll {
     max-width: 1160px;
     width: 100%;
     margin: 0 auto;
-    display: flex; 
+    display: flex;
 }
 
 .cont-nt .img-nt {
@@ -322,13 +348,14 @@ body.no-scroll {
 .txt-nt h2,
 .txt-nt h3,
 .txt-nt p {
-    color: var(--cl--white--600);
+    color: var(--color-texto-principal);
     text-align: center;
     font-family: "Comfortaa", sans-serif;
     margin-bottom: 14px;
 }
 
 .txt-nt h2 {
+
     font-size: 3em;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -341,14 +368,14 @@ body.no-scroll {
 }
 
 .txt-nt span {
-    color: var(--logo--span);
+    color: var(--color-texto-destacado);
     font-family: "Clicker Script", cursive;
     font-size: 43.5px;
     letter-spacing: 0.1em;
 }
 
 .txt-nt p {
-    color: var(--cl--white--600);
+    color: var(--color-texto-secundario);
     font-family: "Comfortaa", sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
@@ -366,7 +393,7 @@ body.no-scroll {
     .cont-nt {
         flex-direction: column;
         gap: 20px;
-        
+
     }
 
     .cont-nt .img-nt {
@@ -398,10 +425,326 @@ body.no-scroll {
         height: 280px;
     }
 }
+
 /* ----> Final de Nosotros <---- */
 
+/* ----> Comienzo de propuesta <---- */
+
 .Secti-pro {
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 40px auto;
+    padding: 20px;
 }
 
+.txt h1 {
+    text-align: center;
+    color: var(--color-texto-principal);
+    font-family: "Comfortaa", sans-serif;
+    font-size: 3em;
+    letter-spacing: 2px;
+    padding: 3em 0 2em;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.Arti-card {
+    background-color: var(--color-apartado-frecuente);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.Arti-card:hover {
+    transform: translateY(-5px);
+}
+
+.fi-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 15vh;
+    display: block;
+    background: #1e9e3e;
+}
+
+.Conte {
+    padding: 15px;
+}
+
+.Conte h3,
+.Conte p {
+    font-family: "Comfortaa", sans-serif;
+    color: var(--color-fondo-general);
+}
+
+.Conte h3 {
+    margin: 15px 0 15px 0;
+    font-size: 1.8em;
+}
+
+.Conte p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.Conte a {
+    font-size: 1.5em;
+    font-family: "Comfortaa", sans-serif;
+}
+
+
+.read-more {
+    color: var(--color-hover-menu);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.read-more .icon {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.Arti-card:hover .read-more .icon {
+    opacity: 1;
+    /* Muestra la flecha cuando se pasa el mouse sobre la tarjeta */
+    transform: translateX(0);
+    /* Mueve la flecha a su posición original */
+}
+
+.Arti-card:not(:hover) .read-more .icon {
+    opacity: 0;
+    /* Oculta la flecha cuando se retira el mouse de la tarjeta */
+    transform: translateX(-10px);
+    /* Desplaza la flecha fuera de la vista nuevamente */
+}
+
+@media (max-width:1101px) {
+    .Arti-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    .txt h1 {
+        padding: 2em 0 1.5em;
+    }
+
+}
+
+/* ----> Apartado para el modal<---- */
+
+.modal {
+    border: none;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 700px;
+    min-width: 300px;
+    /* Evita que el modal se haga demasiado pequeño */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    padding: 1.5rem;
+    /* Reduce el padding en pantallas pequeñas */
+    background: var(--color-apartado-frecuente);
+}
+
+.modal::backdrop {
+    background: linear-gradient(rgba(40, 42, 55, 0.6), rgba(40, 42, 55, 0.6));
+}
+
+.modal[open] {
+    scale: 1;
+    transition: scale .3s ease-in-out;
+
+    @starting-style {
+        scale: 0;
+    }
+}
+
+.modal {
+    transition: scale .3s ease,
+        display .3s ease allow-discrete;
+    scale: 0;
+}
+
+.btn-x {
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-x .x {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 16px;
+    background-color: var(--color-texto-destacado);
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-x .x:first-child {
+    transform: rotate(45deg);
+}
+
+.btn-x .x:last-child {
+    transform: rotate(-45deg);
+}
+
+
+.sub-modal {
+    width: 100%;
+    height: auto;
+}
+
+.sub-modal h2,
+.sub-modal h3,
+.sub-modal p {
+    font-family: "Comfortaa", sans-serif;
+    color: var(--color-fondo-general);
+    margin: 12px;
+}
+
+.sub-modal h2 {
+    font-size: 2.5em;
+
+}
+
+.sub-modal h3 {
+    font-size: 2em;
+}
+
+.sub-modal p {
+    font-size: 1.5em;
+}
+
+@media (max-width:450px) {
+    .txt {
+        max-width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .Secti-pro {
+        padding: 20px;
+    }
+
+    .modal {
+        padding: 1rem;
+        width: 90%;
+        border: none;
+    }
+
+    .txt h1 {
+        font-size: 2rem; /* Reducción del tamaño de la fuente */
+    }
+}
+
+/* ----> Fin de propuesta <---- */
+
+/* ----> Comienzo de FAQ <---- */
+
+.secti-FAQ {
+    max-width: 1000px;
+    width: 90%;
+    margin: 40px auto;
+    /* Aumentar margen superior */
+    min-height: 75vh;
+    padding: 20px;
+}
+
+.secti-FAQ h1 {
+    font-family: "Comfortaa", "Arial", sans-serif;
+    /* Fuentes alternativas */
+    font-weight: 700;
+    font-size: 3em;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    color: var(--color-texto-principal);
+    text-align: center;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.categoria svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+}
+
+.categoria {
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--color-apartado-frecuente);
+    border: 2px solid transparent;
+    transition: .3s ease all, box-shadow .3s ease;
+}
+
+.categoria p {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #434343;
+    transition: color .3s ease;
+}
+
+.categoria path {
+    transition: .3s ease all;
+}
+
+.categoria:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    /* Sombra más notable */
+    transform: scale(1.05);
+}
+
+.categoria:hover p {
+    color: var(--color-fondo-general);
+}
+
+.categoria.activa {
+    border: 2px solid var(--color-hover-menu); /* Cambia el borde al activar */
+   
+}
+
+.categoria.activa p {
+    color: var(--color-fondo-general);
+}
+
+.categoria.activa path {
+   fill: var(--color-hover-menu);
+}
+
+    
+
+/* ----> Fin de FAQ <---- */

@@ -50,7 +50,7 @@ export const Header = () => {
                         <li className={activeSection === 'Home' ? 'active' : ''}><a href="#Home" onClick={() => setMenuOpen(false)}>Inicio</a></li>
                         <li className={activeSection === 'Nosotros' ? 'active' : ''}><a href="#Nosotros" onClick={() => setMenuOpen(false)}>Nosotros</a></li>
                         <li className={activeSection === 'Propuesta' ? 'active' : ''}><a href="#Propuesta" onClick={() => setMenuOpen(false)}>Propuesta</a></li>
-                        <li className={activeSection === 'Preguntas' ? 'active' : ''}><a href="#Preguntas" onClick={() => setMenuOpen(false)}>Preguntas</a></li>
+                        <li className={activeSection === 'FAQ' ? 'active' : ''}><a href="#FAQ" onClick={() => setMenuOpen(false)}>Preguntas</a></li>
                         <li className={activeSection === 'Contacto' ? 'active' : ''}><a href="#Contacto" onClick={() => setMenuOpen(false)}>Contacto</a></li>
                     </ul>
                 </nav>

@@ -3,6 +3,7 @@ import { Header } from './Components/header'
 import { Home } from './Components/home'
 import { Nosotros } from './Components/nosotro'
 import { Propuestas } from './Components/propuesta'
+import { FAQ } from './Components/pregunta'
 
 function App() {
 
@@ -13,10 +14,9 @@ function App() {
 
       <main>
         <Home />
-        <Nosotros/>
+        <Nosotros />
         <Propuestas />
-        
-
+        <FAQ />
       </main>
     </>
   )
