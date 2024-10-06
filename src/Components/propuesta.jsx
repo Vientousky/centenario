@@ -46,9 +46,8 @@ export const Propuestas = () => {
                                 <p>Ofrecemos modalidades en Comunicación, Ciencias Sociales y Ciencias Naturales, además de Humanidades en horario nocturno. A partir de 3er año.</p>
                                 <a href="#" className="read-more" onClick={(e) => { e.preventDefault(); handleOpenModal(modalidadesRef); }}>
                                     <span className="sr-only">Saber más</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className='icon' height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+
                                 </a>
                             </div>
                         </div>
@@ -66,9 +65,7 @@ export const Propuestas = () => {
                                 <p>Los turnos que ofrecemos son: Turno Mañana (3, 4, 5 año), Turno Tarde (1 y 2 año) y Turno Vespertino. Cada uno se adapta a diferentes necesidades y estilos de vida.</p>
                                 <a href="#" className="read-more" onClick={(e) => { e.preventDefault(); handleOpenModal(turnosRef); }}>
                                     <span className="sr-only">Saber más</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className='icon' height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -82,13 +79,11 @@ export const Propuestas = () => {
                             </figure>
 
                             <div className='Conte'>
-                                <h3>Equipo de trabajo</h3>
+                                <h3>Deme ideas</h3>
                                 <p>Contamos con un equipo de profesionales adaptados y comprometidos con brindar la mejor experiencia educativa y experiencia a sus estudiantes.</p>
                                 <a href="#" className="read-more" onClick={(e) => { e.preventDefault(); handleOpenModal(equipoRef); }}>
                                     <span className="sr-only">Saber más</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className='icon' height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                                 </a>
                             </div>
                         </div>

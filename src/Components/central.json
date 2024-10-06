@@ -1,8 +1,8 @@
 {
   "Reglamentos": [
     {
-      "Titulo": "¿Cuál es el reglamento?",
-      "Descripcion": "Este apartado detalla las normas y directrices que deben seguirse dentro de la institución. Incluye información sobre comportamiento, uso de instalaciones y procedimientos generales."
+      "titulo": "¿Cuál es el reglamento?",
+      "descripcion": "Este apartado detalla las normas y directrices que deben seguirse dentro de la institución. Incluye información sobre comportamiento, uso de instalaciones y procedimientos generales."
     },
     {
       "titulo": "¿Cómo se sancionan las conductas?",

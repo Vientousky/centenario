@@ -257,6 +257,7 @@ html {
     font-family: "Comfortaa", sans-serif;
     background-color: var(--color-boton-menu);
     border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .btn a:hover {
@@ -431,10 +432,10 @@ html {
 /* ----> Comienzo de propuesta <---- */
 
 .Secti-pro {
-    width: 90%;
     max-width: 1200px;
-    min-height: 100vh;
+    width: 90%;
     margin: 40px auto;
+    min-height: 100vh;
     padding: 20px;
 }
 
@@ -444,7 +445,7 @@ html {
     font-family: "Comfortaa", sans-serif;
     font-size: 3em;
     letter-spacing: 2px;
-    padding: 3em 0 2em;
+    padding: 2em;
 }
 
 .card-container {
@@ -507,27 +508,30 @@ html {
     transition: color 0.3s ease-in-out;
 }
 
+.read-more {
+    color: var(--color-hover-menu); /* Color inicial del texto */
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
 .read-more .icon {
     margin-left: 5px;
     width: 20px;
     height: 20px;
     opacity: 0;
     transform: translateX(-10px);
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, fill 0.3s ease-in-out;
 }
 
-.Arti-card:hover .read-more .icon {
+.read-more:hover {
+    color: var(--color-hover-menu); /* Color del texto al hacer hover */
+}
+
+.read-more:hover .icon {
     opacity: 1;
-    /* Muestra la flecha cuando se pasa el mouse sobre la tarjeta */
-    transform: translateX(0);
-    /* Mueve la flecha a su posición original */
-}
-
-.Arti-card:not(:hover) .read-more .icon {
-    opacity: 0;
-    /* Oculta la flecha cuando se retira el mouse de la tarjeta */
-    transform: translateX(-10px);
-    /* Desplaza la flecha fuera de la vista nuevamente */
+    transform: translateX(0); /* Animación de la flecha */
+    fill: var(--color-hover-menu); /* Nuevo color de la flecha al hacer hover */
 }
 
 @media (max-width:1101px) {
@@ -671,17 +675,18 @@ html {
     max-width: 1000px;
     width: 90%;
     margin: 40px auto;
-    /* Aumentar margen superior */
-    min-height: 75vh;
-    padding: 20px;
+    min-height: 100vh;
+    padding: 20px
 }
 
 .secti-FAQ h1 {
     font-family: "Comfortaa", "Arial", sans-serif;
     /* Fuentes alternativas */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     font-weight: 700;
     font-size: 3em;
-    margin-bottom: 2rem;
+    padding: 2em 0 ;
     letter-spacing: 2px;
     color: var(--color-texto-principal);
     text-align: center;
@@ -745,6 +750,79 @@ html {
    fill: var(--color-hover-menu);
 }
 
-    
+/* ----> Repuesta <---- */
+
+.listado-de-pregunta {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.FAQ-destails {
+    background: var(--color-apartado-frecuente);
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--color-hover-menu);
+    border-bottom-width: 4px ;
+    transition: transform 0.3s ease; 
+}
+
+.FAQ-destails[open] .FAQ-sumary svg {
+    transform: rotate(45deg); /* Rota el SVG 45 grados cuando está abierto */
+}
+
+
+.FAQ-destails p {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.2em;
+    margin-top: 16px;
+}
+
+.FAQ-sumary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.FAQ-sumary h2 {
+    font-family: "Comfortaa", sans-serif;
+}
+
+.FAQ-sumary svg {
+    fill: #000000;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;  /* Evita que se reduzca el tamaño */
+    min-height: 35px;
+    transition: transform 0.3s ease; /* Añade transición para el giro */
+}
+
+@media (max-width:790px) {
+
+    .categorias {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .categoria {
+        padding: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .categoria svg {
+        margin-right: 10px;
+        width:   50px;
+        height:  50px;
+
+        min-width:   50px;
+        min-height:  50px;
+    } 
+
+    .categoria p{
+        font-size: 1.5em;
+    }
+}
 
 /* ----> Fin de FAQ <---- */
