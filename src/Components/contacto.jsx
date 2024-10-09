@@ -5,7 +5,7 @@ export const Contacto = () => {
     return (
         <section id="Contacto" className="secti-conta">
 
-            <h1>contactanos</h1>
+            <h1>Eu no se me enoje Mañana lo termino</h1>
 
             <div className="izq-info">
 
