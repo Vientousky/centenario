@@ -834,17 +834,17 @@ html {
 
 /* ----> Comienzo de Contacto <---- */
 
-.Secti-conta {
+.secti-conta {
     width: 90%;
     max-width: 1100px;
     min-height: 100vh;
     margin: 40px auto;
 }
 
-.Secti-conta h1 {
+.secti-conta h1 {
     padding: 2em 0;
     text-align: center;
-    color: var(--color-texto-principal);
+    color: #fff;
     font-family: "Comfortaa", "Arial", sans-serif;
     font-size: 3em;
 }
