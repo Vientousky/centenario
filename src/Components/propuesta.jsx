@@ -79,7 +79,7 @@ export const Propuestas = () => {
                             </figure>
 
                             <div className='Conte'>
-                                <h3>Deme ideas</h3>
+                                <h3>Equipo de Trabajo</h3>
                                 <p>Contamos con un equipo de profesionales adaptados y comprometidos con brindar la mejor experiencia educativa y experiencia a sus estudiantes.</p>
                                 <a href="#" className="read-more" onClick={(e) => { e.preventDefault(); handleOpenModal(equipoRef); }}>
                                     <span className="sr-only">Saber más</span>

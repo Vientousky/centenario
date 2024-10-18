@@ -844,14 +844,17 @@ html {
 /* ----> Comienzo de Contacto <---- */
 
 .secti-conta {
-    width: 100%;
-    min-height: 90vh;
+    width: 90%;
+    max-width: 1100px;
+    min-height: 100vh;
+    margin: 40px auto;
 }
 
 .secti-conta h1 {
+.secti-conta h1 {
     padding: 2em 0;
     text-align: center;
-    color: var(--color-texto-principal);
+    color: #fff;
     font-family: "Comfortaa", "Arial", sans-serif;
     font-size: 3em;
 }
@@ -1065,3 +1068,4 @@ footer {
     grid-column: 1 / -1; /* Hace que el card ocupe las 3 columnas del grid */
     margin-top: 20px;
 }
+/* ----> Comienzo de foother <---- */

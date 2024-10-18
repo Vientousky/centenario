@@ -3,6 +3,7 @@ import './central.css';
 
 export const Contacto = () => {
     return (
+        <>
         <section id="Contacto" className="secti-conta">
 
             <h1>Contactanos</h1>
@@ -80,5 +81,6 @@ export const Contacto = () => {
 
             </div>
         </section>
+        </>
     );
 };
