@@ -10,13 +10,19 @@ export const Footer = () => {
 
                     <div className="info-foo">
 
-                        <div className="about">
-                            <h3>Nosotros <span>SVG</span></h3>
+                        <div className="info-1">
+                            <h3><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg></span>Nosotros </h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut beatae fugiat aut. Voluptas, veniam voluptates!</p>
                         </div>
 
-                        <div className="importante">
-                            <h3>Importantes</h3>
+                        <div className="info-1">
+                            <h3><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                            </svg></span>Reglamentos</h3>
                             <ul>
                                 <li><a href="#">Reglamentos</a></li>
                                 <li><a href="#">Vestimentas</a></li>
@@ -24,17 +30,22 @@ export const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="Ubi">
-                            <h3>Ubicacion <span>SVG</span></h3>
+                        <div className="info-1">
+                            <h3><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg></span>Ubicacion </h3>
                             <p>Mz 140 Pc 4 Barrio 713 viviendas</p>
                         </div>
 
                         <div className="mensaje">
-                            <p>“Formando estudiantes comprometidos con el futuro desde 1995.”</p>
+                            <p>“Formando estudiantes comprometidos con el futuro desde 1988.”</p>
                         </div>
 
                         <div className="social">
                             <h3>Síguenos</h3>
+
+                            <div className='red'>
 
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -47,6 +58,8 @@ export const Footer = () => {
                                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
                                 </svg>
                             </a>
+
+                            </div>
                         </div>
 
                     </div>
