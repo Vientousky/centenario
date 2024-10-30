@@ -23,7 +23,10 @@ export const FAQ = () => {
     return (
         <>
             <section id='FAQ' className='secti-FAQ'>
-                <h1>Preguntas frecuentes</h1>
+
+                <div className='txt-center'>
+                    <h1 className='txt-fs-h1'>Preguntas frecuentes</h1>
+                </div>
 
                 {/* Selección de categorías */}
                 <div className="categorias" id='categorias'>

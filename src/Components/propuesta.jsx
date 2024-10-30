@@ -28,8 +28,9 @@ export const Propuestas = () => {
     return (
         <>
             <section id='Propuesta' className='Secti-pro'>
-                <div className='txt'>
-                    <h1>Propuestas Académicas</h1>
+
+                <div className='txt-center'>
+                    <h1 className='txt-fs-h1'>Propuestas Académicas</h1>
                 </div>
 
                 <div className="card-container">

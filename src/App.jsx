@@ -20,8 +20,9 @@ function App() {
         <Propuestas />
         <FAQ />
         <Contacto/>
-        <Footer/>
       </main>
+
+      {/* <Footer/> */}
     </>
   )
 }
