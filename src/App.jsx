@@ -19,10 +19,10 @@ function App() {
         <Nosotros />
         <Propuestas />
         <FAQ />
-        <Contacto/>
+        <Contacto />
       </main>
-
-      {/* <Footer/> */}
+      
+      <Footer />
     </>
   )
 }

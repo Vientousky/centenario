@@ -63,17 +63,17 @@ export const Contacto = () => {
                             <tbody>
                                 <tr>
                                     <td>Mañana</td>
-                                    <td>7:15 AM - 12:55 PM</td>
+                                    <td>7:15 AM 12:55 PM</td>
                                     <td>Directora: Fagunde Maria </td>
                                 </tr>
                                 <tr>
                                     <td>Tarde</td>
-                                    <td>1:10 PM - 6:55 PM</td>
+                                    <td>1:10 PM  6:55 PM</td>
                                     <td>ViceDirector: Dino Campañola</td>
                                 </tr>
                                 <tr>
                                     <td>Vespertino</td>
-                                    <td>5:30 PM - 11:00 PM</td>
+                                    <td>5:30 PM  11:00 PM</td>
                                     <td>ViceDirectora: Blaho Andre</td>
                                 </tr>
                             </tbody>
