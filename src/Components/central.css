@@ -113,12 +113,13 @@ html {
     z-index: 1;
     top: 0;
 
-    animation: scroll linear both;
-    animation-timeline: scroll(root block);
-    animation-range: 0 250px;
+    animation: Aparicion linear both;
+    animation-timeline: scroll(root block) ;
+    animation:0 200px ;
+
 }
 
-@keyframes scroll {
+@keyframes Aparicion {
 
     to {
         background: var(--FND-HDR-FTR);
