@@ -176,7 +176,7 @@ html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.menu-toggle {
+.Alternar-menus {
     display: none;
 }
 
@@ -212,7 +212,7 @@ html {
         text-align: center;
     }
 
-    .menu-toggle {
+    .Alternar-menus {
         margin: 20px;
         display: block;
         width: 32px;
@@ -224,7 +224,7 @@ html {
         z-index: 3;
     }
 
-    .menu-toggle .line {
+    .Alternar-menus .line {
         display: block;
         width: 100%;
         height: 3px;
@@ -234,15 +234,15 @@ html {
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .menu-toggle.active .line:nth-child(1) {
+    .Alternar-menus.active .line:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .menu-toggle.active .line:nth-child(2) {
+    .Alternar-menus.active .line:nth-child(2) {
         opacity: 0;
     }
 
-    .menu-toggle.active .line:nth-child(3) {
+    .Alternar-menus.active .line:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
@@ -965,11 +965,6 @@ html {
 
 @media (max-width: 680px) {
 
-    
-    .card-info {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
     .item-card:nth-child(3) {
         grid-column: span 1;
     }
@@ -978,10 +973,6 @@ html {
     .item-card p {
         justify-content: flex-start;
         text-wrap: balance;
-    }
-
-    .tabla-horarios table  {
-        width: 90%;
     }
 
     .tabla-horarios,
@@ -1013,7 +1004,7 @@ html {
     }
 
     .tabla-horarios h2 {
-        margin: 50px;
+        margin: 50px 0;
     }
 
 }
@@ -1106,6 +1097,11 @@ footer {
 @media (max-width: 414px) {
     .foo-con {
         max-width: 90%;
+    }
+
+    .foo-card ul {
+        display: flex;
+        flex-direction: column;
     }
 }
 

@@ -93,7 +93,7 @@ export const Header = () => {
                 </nav>
 
                 <button
-                    className={`menu-toggle ${menuOpen ? 'active' : ''}`}
+                    className={`Alternar-menus ${menuOpen ? 'active' : ''}`}
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-expanded={menuOpen ? "true" : "false"}>
                     <span className="line"></span>
