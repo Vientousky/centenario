@@ -95,7 +95,7 @@ html {
 @media(max-width:400px) {
 
     .txt-fs-h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -965,6 +965,21 @@ html {
 
 @media (max-width: 680px) {
 
+    .item-card {
+        padding: 8px;
+    }
+
+    .item-card svg {
+        width: 1em;
+        height: 1em;
+    }
+
+    .container-central {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+
     .item-card:nth-child(3) {
         grid-column: span 1;
     }
@@ -1006,6 +1021,7 @@ html {
     .tabla-horarios h2 {
         margin: 50px 0;
     }
+
 
 }
 
