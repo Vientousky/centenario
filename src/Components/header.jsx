@@ -4,11 +4,11 @@ import './central.css';
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
+    const [scrolled, setScrolled] = useState(false); // Estado para el fondo del header
 
     const handleScroll = () => {
-
         const sections = document.querySelectorAll('section');
-        let currentSection = 'Home'; // Sección predeterminada
+        let currentSection = 'Home';
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -17,17 +17,16 @@ export const Header = () => {
             }
         });
 
-        // Solo cambiar la sección activa si la sección actual existe
         if (document.getElementById(currentSection)) {
             setActiveSection(currentSection);
         }
+
+        // Cambia el estado de fondo en función de la posición de scroll
+        setScrolled(window.scrollY > 50); // Puedes ajustar el valor de 50 píxeles según prefieras
     };
 
     useEffect(() => {
-        // Ejecutar handleScroll al cargar la página
         handleScroll();
-
-        // Agregar el evento de scroll
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -42,19 +41,17 @@ export const Header = () => {
         }
     }, [menuOpen]);
 
-    // Función para manejar el clic en los enlaces
     const handleLinkClick = (e, sectionId) => {
-        e.preventDefault(); // Previene el comportamiento predeterminado
+        e.preventDefault();
         const section = document.getElementById(sectionId);
 
         if (section) {
-            setMenuOpen(false); // Cierra el menú
-            section.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave
+            setMenuOpen(false);
+            section.scrollIntoView({ behavior: 'smooth' });
 
-            // Cambiar la sección activa después de un pequeño retardo para evitar titileo
             setTimeout(() => {
-                setActiveSection(sectionId); // Establece la sección activa
-            }, 300); // Espera a que el scroll termine
+                setActiveSection(sectionId);
+            }, 300);
         } else {
             console.warn(`Sección con ID ${sectionId} no encontrada.`);
         }
@@ -62,10 +59,9 @@ export const Header = () => {
 
     return (
         <>
-            <header className='hd-menu'>
-                
+            <header className={`hd-menu ${scrolled ? 'scrolled' : ''}`}>
                 <div className='lg' onClick={() => handleLinkClick(new Event('click'), 'Home')}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-mortarboard" viewBox="0 0 16 16">
                         <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z" />
                         <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z" />
                     </svg>

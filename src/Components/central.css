@@ -112,20 +112,12 @@ html {
     position: fixed;
     z-index: 1;
     top: 0;
-
-    animation: Aparicion linear both;
-    animation-timeline: scroll(root block) ;
-    animation:0 200px ;
-
+    transition: 0.3s ease-in-out;
 }
 
-@keyframes Aparicion {
-
-    to {
-        background: var(--FND-HDR-FTR);
-    }
+.hd-menu.scrolled {
+    background-color: var(--FND-HDR-FTR);
 }
-
 
 .lg {
     display: grid;
