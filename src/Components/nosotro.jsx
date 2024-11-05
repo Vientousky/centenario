@@ -12,7 +12,9 @@ export const Nosotros = () => {
 
                     <figure className='img-ntro'>
                         
-                        <img src="" alt="" />
+                        <img src="/alumnos.webp" alt=""       className='foto1' />
+                        <img src="/abanderado.webp" alt=""    className='foto2' />
+                        <img src="/independencia.webp" alt="" className='foto3' />
 
                     </figure>
 
