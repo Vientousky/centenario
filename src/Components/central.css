@@ -357,9 +357,10 @@ html {
 
 /* ----> Comienzo de Nosotros <---- */
 
+/* Contenedor principal */
 .sect-ntro {
     width: 100%;
-    min-height: auto;
+    min-height: 60vh;
     padding: 6.5rem 0 1.5rem;
     display: flex;
     justify-content: center;
@@ -367,7 +368,7 @@ html {
 
 .cont-ntro {
     max-width: 1100px;
-    height: 50vh;
+    min-height: 50vh;
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 20px;
@@ -382,18 +383,19 @@ html {
     gap: 20px;
 }
 
+/* Estilos para las imágenes */
 .foto1, .foto2, .foto3 {
     position: absolute;
-    border-radius: 20px; /* Borde redondeado */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3)
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Posicionamiento específico */
 .foto1 {
     width: 250px;
     height: 180px;
     top: 20px;
     left: 10px;
-    z-index: 3; /* Primero en el orden de superposición */
     transform: rotate(6deg);
 }
 
@@ -402,7 +404,6 @@ html {
     height: 190px;
     top: 60px;
     left: 280px;
-    z-index: 2;
     transform: rotate(-6deg);
 }
 
@@ -411,11 +412,10 @@ html {
     height: 200px;
     top: 268px;
     left: 110px;
-    z-index: 1; /* Última en el orden */
     transform: rotate(4deg);
 }
 
-
+/* Texto */
 .txt-ntro {
     font-family: "Roboto", sans-serif;
     text-align: center;
@@ -451,23 +451,46 @@ html {
     font-size: 1.5rem;
 }
 
-/* Responsivo para pantallas pequeñas */
-@media (max-width: 750px) {
+/* Responsivo para pantallas medianas */
+@media (max-width: 1080px) {
     .cont-ntro {
         grid-template-columns: 1fr;
+    }
+    .foto1, .foto2, .foto3 {
+        height: 170px;
+        width: 260px;
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+    }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 850px) {
+    .cont-ntro {
         margin: 32px;
     }
 
     .img-ntro {
-        height: 30vh;
+        flex-direction: column; 
+        align-items: center;
     }
 
     .foto1, .foto2, .foto3 {
-        position: relative;
-        width: 100px;
-        height: 100px;
+        width: 90%; /* Ajusta el tamaño para pantallas pequeñas */
+        height: auto;
+        top: auto;
+        left: auto;
+        margin: 8px 0;
     }
+
+    .foto1, .foto2 {
+        display: none;
+    }
+
 }
+
 
 /* ----> Final de Nosotros <---- */
 
@@ -1010,7 +1033,7 @@ html {
     }
 
     .container-central {
-        width: 100%;
+        width: 90%;
         max-width: 400px;
         margin: auto;
     }
