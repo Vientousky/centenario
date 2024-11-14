@@ -35,27 +35,28 @@
 
     /* TEXTO CLAROS */
 
-    --TXT-PRN: #ebeaef;
+    --TXT-PRN: #EDEBF2;
 
-    --TXT-SCN: #f1f0f5;
+    --TXT-SCN: #F4F3F7;
 
-    --TXT-DSC: #e4dff9;
+    --TXT-DSC: #E8E4F5;
 
     /* TEXTO OSCUROS */
 
-    --TXT-PRN-OSC: #1d1d1d;
+    --TXT-PRN-OSC: #0D0D0D;
 
-    --TXT-SCN-OSC: #2f2e2e;
+    --TXT-SCN-OSC: #1A1A1A;
 
-    --TXT-DSC-OSC: #2a2929;
+    --TXT-DSC-OSC: #4d4848;
 
     /* COLOR DE INTERACION*/
 
-    --TXT-INST: #26a760;
+    --TXT-INST: #14ad3f;
 
-    --TXT-INST-HVR: #2ca665;
+    --TXT-INST-HVR: #48b53e;
 
-    --TXT-DST: #1787ef;
+    --TXT-DST: #1a78d4;
+
 
 }
 
@@ -75,7 +76,7 @@ html {
     text-align: center;
     text-transform: uppercase;
     color: var(--TXT-PRN);
-    border: 5px solid var(--TXT-PRN);
+    border: 5px solid var(--FND-CLR);
     padding: 20px 15px;
     display: inline-block;
 }
@@ -242,8 +243,6 @@ html {
 
 /* ---->  Final de header <---- */
 
-
-
 /* ----> Inicio de home <---- */
 
 .sect-hom {
@@ -297,7 +296,7 @@ html {
 .btn a {
     font-family: "Roboto", sans-serif;
     font-size: 1.2rem;
-    color: var(--TXT-DSC-OSC);
+    color: var(--TXT-SCN-OSC);
     background: var(--FND-CLR);
     padding: 8px 30px;
     border-radius: 10px;
@@ -308,7 +307,7 @@ html {
 
 .btn a:hover {
     transform: scale(1.05);
-    background: var(--TXT-INST);
+    background: var(--TXT-INST-HVR);
 }
 
 
@@ -360,7 +359,7 @@ html {
 /* Contenedor principal */
 .sect-ntro {
     width: 100%;
-    min-height: 60vh;
+    min-height: 70vh;
     padding: 6.5rem 0 1.5rem;
     display: flex;
     justify-content: center;
@@ -368,7 +367,6 @@ html {
 
 .cont-ntro {
     max-width: 1100px;
-    min-height: 50vh;
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 20px;
@@ -384,7 +382,9 @@ html {
 }
 
 /* Estilos para las imágenes */
-.foto1, .foto2, .foto3 {
+.foto1,
+.foto2,
+.foto3 {
     position: absolute;
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -456,7 +456,10 @@ html {
     .cont-ntro {
         grid-template-columns: 1fr;
     }
-    .foto1, .foto2, .foto3 {
+
+    .foto1,
+    .foto2,
+    .foto3 {
         height: 170px;
         width: 260px;
         position: relative;
@@ -468,24 +471,26 @@ html {
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 850px) {
-    .cont-ntro {
-        margin: 32px;
-    }
+
 
     .img-ntro {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
-    .foto1, .foto2, .foto3 {
-        width: 90%; /* Ajusta el tamaño para pantallas pequeñas */
+    .foto1,
+    .foto2,
+    .foto3 {
+        width: 90%;
+        /* Ajusta el tamaño para pantallas pequeñas */
         height: auto;
         top: auto;
         left: auto;
         margin: 8px 0;
     }
 
-    .foto1, .foto2 {
+    .foto1,
+    .foto2 {
         display: none;
     }
 
@@ -496,29 +501,28 @@ html {
 
 /* ----> Comienzo de propuesta <---- */
 
-.Secti-pro {
-    max-width: 1200px;
-    width: 90%;
-    min-height: 100vh;
-    margin: 40px auto;
-    padding: 1.5rem
+.sect-card {
+
+    width: 100%;
+    min-height: 88vh;
+    padding: 1.5rem;
 }
 
 
 
 .card-container {
+    max-width: 1100px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .Arti-card {
-    display: grid;
-    grid-template-rows: auto auto auto;
+
     background-color: var(--FND-CLR);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     position: relative;
     transition: transform 0.3s;
 
@@ -529,47 +533,44 @@ html {
 }
 
 .fi-img img {
-    object-fit: cover;
+
     width: 100%;
     height: 15vh;
     display: block;
-    background: #1e9e3e;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    background: var(--TXT-INST);
 }
 
-.Conte {
-    padding: 15px;
-    display: grid;
-    grid-template-rows: subgrid;
-    grid: 1/3;
+.cont {
+    padding: 1.2rem;
 }
 
-.Conte h3,
-.Conte p {
+
+.cont h3,
+.cont p,
+.cont a {
     font-family: "Comfortaa", sans-serif;
 }
 
-.Conte h3 {
+.cont h3 {
     margin: 15px 0 15px 0;
     font-size: 1.8em;
     color: var(--TXT-PRN-OSC);
 }
 
-.Conte p {
+.cont p {
     font-size: 1.4em;
     margin-bottom: 20px;
-    color: var(--TXT-DSC-OSC);
+    color: var(--TXT-SCN-OSC);
 }
 
-.Conte a {
-    font-size: 1.5em;
-    font-family: "Comfortaa", sans-serif;
+.read-more {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-
-.read-more {
+    font-size: 1.5em;
+    font-family: "Comfortaa", sans-serif;
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease-in-out;
@@ -589,23 +590,16 @@ html {
     height: 20px;
     opacity: 0;
     transform: translateX(-10px);
+    fill: var(--TXT-INST);
     transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, fill 0.3s ease-in-out;
-}
-
-.read-more:hover {
-    color: var(--TXT-INST-HVR);
-    /* Color del texto al hacer hover */
 }
 
 .read-more:hover .icon {
     opacity: 1;
     transform: translateX(0);
-    /* Animación de la flecha */
-    fill: var(--TXT-INST-HVR);
-    /* Nuevo color de la flecha al hacer hover */
 }
 
-@media (max-width:980px) {
+@media (max-width:990px) {
     .Arti-card:nth-child(3) {
         grid-column: 1 / -1;
     }
@@ -617,12 +611,12 @@ html {
 
 .modal {
     border: none;
-    border-radius: 16px;
+    border-radius: 14px;
     width: 80%;
     max-width: 700px;
     min-width: 300px;
-    /* Evita que el modal se haga demasiado pequeño */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.418);
     position: fixed;
     inset: 0;
     margin: auto;
@@ -651,7 +645,6 @@ html {
 }
 
 .btn-x {
-    width: 100%;
     position: absolute;
     top: 5px;
     right: 8px;
@@ -693,21 +686,23 @@ html {
 .sub-modal h3,
 .sub-modal p {
     font-family: "Comfortaa", sans-serif;
-    color: var(--TXT-PRN-OSC);
+    
     margin: 12px;
 }
 
 .sub-modal h2 {
     font-size: 2.5em;
-
+    color: var(--TXT-PRN-OSC);
 }
 
 .sub-modal h3 {
     font-size: 2em;
+    color: var(--TXT-PRN-OSC);
 }
 
 .sub-modal p {
     font-size: 1.5em;
+    color: var(--TXT-SCN-OSC);
 }
 
 @media (max-width:450px) {
@@ -726,13 +721,12 @@ html {
 
     .modal {
         padding: 1rem;
-        width: 90%;
+        width: 86%;
         border: none;
     }
 
     .txt h1 {
         font-size: 2rem;
-        /* Reducción del tamaño de la fuente */
     }
 }
 
@@ -742,9 +736,9 @@ html {
 /* ----> Comienzo de FAQ <---- */
 
 .secti-FAQ {
-    max-width: 1000px;
-    width: 100%;
+    max-width: 1100px;
     min-height: 90vh;
+    width: 100%;
     margin: auto;
     padding: 1.5rem
 }
@@ -753,20 +747,24 @@ html {
 .categorias {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 60px;
+    gap: 1.2rem;
+    margin-bottom: 4rem;
 }
 
 .categoria svg {
     width: 64px;
     height: 64px;
     margin-bottom: 12px;
+    fill: var(--TXT-DSC-OSC);
 }
+
+
+
 
 .categoria {
     cursor: pointer;
     text-align: center;
-    padding: 20px;
+    padding: 12px;
     border-radius: 12px;
     background: var(--FND-CLR);
     border: 4px solid transparent;
@@ -775,22 +773,25 @@ html {
 
 .categoria p {
     font-family: "Comfortaa", sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: var(--TXT-DSC-OSC);
     transition: color .3s ease;
 }
 
 .categoria path {
     transition: .3s ease all;
+
 }
 
 .categoria:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
-.categoria:hover p {
-    color: var(--TXT-INST);
+.categoria:hover p,
+.categoria:hover svg {
+    color: var(--TXT-PRN-OSC);
+    fill: var(--TXT-PRN-OSC);
 }
 
 .categoria.activa {
@@ -803,7 +804,7 @@ html {
 }
 
 .categoria.activa path {
-    fill: var(--TXT-PRN-OSC);
+    fill: var(--TXT-INST);
 }
 
 /* ----> Repuesta <---- */
@@ -826,9 +827,8 @@ html {
 
 
 
-
 .FAQ-destails p {
-    color: var(--TXT-DSC-OSC);
+    color: var(--TXT-SCN-OSC);
     font-size: 1.2em;
     margin-top: 16px;
 }
@@ -840,8 +840,11 @@ html {
     cursor: pointer;
 }
 
-.FAQ-sumary h2 {
+.FAQ-sumary h3 {
     color: var(--TXT-PRN-OSC);
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-wrap: balance;
 }
 
 .FAQ-sumary svg {
@@ -849,10 +852,9 @@ html {
     width: 35px;
     height: 35px;
     min-width: 35px;
-    /* Evita que se reduzca el tamaño */
     min-height: 35px;
     transition: transform 0.3s ease;
-    /* Añade transición para el giro */
+
 }
 
 .FAQ-destails[open] .FAQ-sumary svg {
@@ -875,8 +877,8 @@ html {
     .categoria svg {
         margin-right: 10px;
         margin-bottom: 0;
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
 
 
         min-width: auto;
@@ -895,7 +897,7 @@ html {
 .secti-conta {
     width: 100%;
     min-height: 100vh;
-    padding: 1.5rem 0 4.5rem ;
+    padding: 1.5rem 0 4.5rem;
 }
 
 
@@ -906,7 +908,7 @@ html {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
-    margin:auto;
+    margin: auto;
 }
 
 .card-info {
@@ -949,7 +951,7 @@ html {
 }
 
 .item-card p {
-    color: var(--TXT-DSC-OSC);
+    color: var(--TXT-SCN-OSC);
     font-size: 1.2rem;
 }
 
@@ -985,8 +987,7 @@ html {
 .tabla-horarios td {
     padding: 14px 20px;
     text-align: center;
-    border-bottom: 1px solid var(--FND-HDR-FTR);
-    color: var(--TXT-DSC-OSC);
+    color: var(--TXT-SCN-OSC);
 }
 
 .tabla-horarios th {
@@ -1005,7 +1006,7 @@ html {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
-    color: var(--TXT-DSC);
+    color: var(--TXT-SCN);
 }
 
 @media (max-width:1240px) {
